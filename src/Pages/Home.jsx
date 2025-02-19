@@ -21,17 +21,22 @@ const Home = () => {
     {
       id: 1,
       workdelay: "100",
-      WorkImg: "./work/work1.webp",
+      WorkImg: "/work/work1.webp", // No dot (.) before "/work"
     },
     {
       id: 2,
       workdelay: "200",
-      WorkImg: "./work/work2.webp",
+      WorkImg: "/work/work2.webp",
     },
     {
       id: 3,
       workdelay: "300",
-      WorkImg: "./work/work3.webp",
+      WorkImg: "/work/work3.webp",
+    },
+    {
+      id: 4, // Fixed duplicate "id: 3"
+      workdelay: "500",
+      WorkImg: "/work/work4.webp",
     },
   ];
 
@@ -146,15 +151,13 @@ const Home = () => {
             >
               {WorkMaping.map((val) => (
                 <SwiperSlide
-                  key={val.id}
-                  data-aos="fade-right"
-                  data-aos-delay={val.workdelay}
+          
                 >
                   <div className="flex items-center justify-center rounded-2xl overflow-hidden">
                     <img
                       className="w-full rounded-2xl scale-100 transition-all duration-300 ease-linear hover:scale-125 hover:blur-[1px]"
                       src={val.WorkImg}
-                      alt=""
+                      alt={`work ${val.id}`} // Accessibility के लिए alt text दिया
                     />
                   </div>
                 </SwiperSlide>
@@ -175,7 +178,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <ServiceCards/>
+      <ServiceCards />
       <div className="section">
         <div className="container">
           <div className="centerhead">

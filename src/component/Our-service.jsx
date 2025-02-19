@@ -41,7 +41,9 @@ export default function ServiceCards() {
         {services.map((service, index) => (
           <div
             key={index}
-            className={`${service.color} p-4 rounded-lg shadow-lg transition-transform duration-300 transform hover:-translate-y-2`}
+              className={`${service.color} p-4 rounded-lg shadow-lg transition-transform duration-300 transform hover:-translate-y-2`}
+              data-aos="fadu-up"
+              data-aos-dealy="200"
           >
             <div className="flex items-center justify-center w-12 h-12 bg-white rounded-full mb-4 text-red-600">
               {service.icon}
