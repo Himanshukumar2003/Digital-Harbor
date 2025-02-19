@@ -6,14 +6,14 @@ const services = [
     description:
       "We create a tailored package, determine the best menu board placement, and develop engaging content as per your requirements.",
     icon: <FaSlidersH size={24} />,
-    color: "bg-yellow-100",
+    color: "bg-orange-100",
   },
   {
     title: "Hardware & Software",
     description:
       "We supply high-quality digital signage hardware and software, designed for professional and long-term reliability.",
     icon: <FaMicrochip size={24} />,
-    color: "bg-green-100",
+    color: "bg-orange-100",
   },
   {
     title: "Installation",
@@ -27,7 +27,7 @@ const services = [
     description:
       "We can take care of your menu boards or provide complete support services if you prefer to manage them independently.",
     icon: <FaThLarge size={24} />,
-    color: "bg-gray-100",
+    color: "bg-orange-100",
   },
 ];
 
