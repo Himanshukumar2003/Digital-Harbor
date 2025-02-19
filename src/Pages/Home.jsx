@@ -80,6 +80,12 @@ const Home = () => {
                 boosts by promoting specific dishes, and maintaining brand
                 consistency across all locations through centralized management.
               </p>
+              <button
+                className="circlebtn"
+                onClick={() => navigate("/digitalmenudisplays")}
+              >
+                Learn More <GoArrowUpRight className="circledesign" />
+              </button>
             </div>
           </div>
 
