@@ -5,7 +5,6 @@ import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import img1 from "/header-1.jpg";
 import img2 from "/header-2.jpg";
-import img3 from "/header-3.jpeg";
 import img4 from "/header-3.jpg";
 
 
@@ -26,9 +25,7 @@ const ImageSlider = () => {
         <SwiperSlide>
           <img src={img2} alt="Slide 2" className="w-full h-full object-cover" />
         </SwiperSlide>
-        <SwiperSlide>
-          <img src={img3} alt="Slide 3" className="w-full h-full object-cover" />
-        </SwiperSlide>
+        
          <SwiperSlide>
           <img src={img4} alt="Slide 4" className="w-full h-full object-cover" />
         </SwiperSlide> 
