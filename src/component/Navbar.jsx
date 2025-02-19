@@ -12,7 +12,7 @@ const Navbar = () => {
   // Scroll event to change navbar background and logo
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 150) {
+      if (window.scrollY > 80) {
         setBgWhite(true);
       } else {
         setBgWhite(false);
@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`shadow-DarkShadow py-5 px-5 fixed top-0 w-full z-[9999] transition-all duration-300 ${
+        className={`shadow-DarkShadow py-2 px-5 fixed top-0 w-full z-[9999] transition-all duration-300 ${
           bgWhite ? "bg-white" : "bg-transparent"
         }`}
       >
