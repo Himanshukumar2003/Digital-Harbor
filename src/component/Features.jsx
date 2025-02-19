@@ -36,7 +36,7 @@ const Features = () => {
   return (
     <>
         {FeatureJson.map((val)=>(
-            <div className='xl:col-span-3 md:col-span-4 col-span-12 m-2 flex items-center justify-center flex-col p-3 bg-transparent transition-all duration-1000 ease-in-out' key={val.id} data-aos="fade-down" data-aos-duration="1000" data-aos-delay={val.Feature_delay}>
+            <div className='xl:col-span-2 md:col-span-4 col-span-6 m-2 flex items-center justify-center flex-col p-3 bg-transparent transition-all duration-1000 ease-in-out' key={val.id} data-aos="fade-down" data-aos-duration="1000" data-aos-delay={val.Feature_delay}>
                 <img src={val.Features_image} className='w-12 invert-[0.1]'/>
                 <h6 className='text-center my-2'>{val.Features_head}</h6>
             </div>

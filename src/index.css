@@ -125,8 +125,8 @@ html {
 
 .swiper-button-next,
 .swiper-button-prev {
-  width: 50px !important;
-  height: 50px !important;
+  width: 40px !important;
+  height: 40px !important;
   background-color: red;
   color: white !important;
   display: flex;

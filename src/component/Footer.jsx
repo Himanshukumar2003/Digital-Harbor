@@ -40,8 +40,8 @@ const Footer = () => {
     <>
       <div className="section bg-Black">
         <div className="container">
-          <div className="grid-cols-9 place-items-start xl:place-items-center">
-            <div className="flex items-center justify-start xl:justify-center flex-col">
+          <div className="grid-cols-9  justify-center items-center">
+            <div className="flex items-center justify-center flex-col">
               <a onClick={() => navigate("/")}>
                 <img src="./white-logo.png" className="w-40 xl:w-52" />
               </a>

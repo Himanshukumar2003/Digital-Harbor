@@ -13,6 +13,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import ServiceCards from "../component/Our-service";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -174,12 +175,13 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <ServiceCards/>
       <div className="section">
         <div className="container">
           <div className="centerhead">
             <h2>Explore Premium Features</h2>
           </div>
-          <div className="grid grid-cols-12 xl:mt-20 md:mt-20 mt-10">
+          <div className="grid grid-cols-12  mt-4">
             <Features />
           </div>
         </div>
