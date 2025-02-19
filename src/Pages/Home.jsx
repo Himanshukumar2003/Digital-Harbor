@@ -38,6 +38,16 @@ const Home = () => {
       workdelay: "500",
       WorkImg: "/work/work4.webp",
     },
+    {
+      id: 5, // Fixed duplicate "id: 3"
+      workdelay: "500",
+      WorkImg: "/work/work5.webp",
+    },
+    {
+      id: 6, // Fixed duplicate "id: 3"
+      workdelay: "500",
+      WorkImg: "/work/work6.webp",
+    },
   ];
 
   return (
@@ -134,12 +144,12 @@ const Home = () => {
             <Swiper
               modules={[Autoplay, Navigation, Pagination]}
               spaceBetween={20}
+              loop={true}
               slidesPerView={4}
               navigation={{
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
               }}
-              pagination={{ clickable: true }}
               autoplay={{ delay: 3000, disableOnInteraction: false }}
               breakpoints={{
                 320: { slidesPerView: 1 },
