@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCartShopping } from "react-icons/fa6";
+import { FaCartShopping, FaBookOpen } from "react-icons/fa6";
 import { ImSpoonKnife } from "react-icons/im";
 import { PiHairDryerFill } from "react-icons/pi";
 import { MdFitnessCenter } from "react-icons/md";
@@ -57,29 +57,43 @@ const SolutionCompo = () => {
       Solution_para:
         "Deploy your newly crafted digital messages to your gym's screens with just a few clicks. You can use our software to deploy the same message or different messaging to multiple screens at the same time.",
     },
+    {
+      id: 6,
+      Solution_delay: "500",
+      Solution_bgcolor: "#E2EFF0",
+      Solution_bordercolor: "#88EAF4",
+      Solution_icon: <FaBookOpen />, // Changed icon
+      Solution_head: "Education Digital Signage",
+      Solution_para:
+        "Enhance learning experiences with dynamic digital displays in schools, colleges, and training centers using Digital Harbor digital signage software.",
+    },
   ];
+
   return (
-    <>
-      {SolutionsJson.map((val) => (
-        <div
-          className="xl:col-span-4 md-col-span-6 col-span-12"
-          key={val.id}
-          data-aos="fade-right"
-          data-aos-delay={val.Solution_delay}
-          data-aos-duration="1000"
-        >
-          <div className="py-10 px-10 bg-gray-100 rounded-lg my-2 mx-2 h-full hover:-translate-y-2 transition-all duration-700 ease-linear">
-            <div className="w-20 h-20 flex items-center justify-center bg-red-600 hover:bg-white hover:text-Black text-white rounded-full text-4xl shadow-DarkShadow border-8 border-solid border-White transition-all duration-700 ease-linear">
-              {val.Solution_icon}
-            </div>
-            <div>
-              <h6 className="my-4">{val.Solution_head}</h6>
-              <p>{val.Solution_para}</p>
+      <div className="grid grid-cols-12 gap-5">
+        {SolutionsJson.map((val) => (
+          <div
+            className=" md:col-span-4 col-span-12 h-full"
+            key={val.id}
+            data-aos="fade-right"
+            data-aos-delay={val.Solution_delay}
+            data-aos-duration="1000"
+          >
+            {/* Card Container */}
+            <div className="flex h-full flex-col  py-10 px-6 bg-gray-100 rounded-lg shadow-lg transition-all duration-700 ease-linear hover:-translate-y-2">
+              {/* Icon Wrapper */}
+              <div className="w-20 h-20 flex items-center justify-center bg-red-600 text-white rounded-full text-4xl shadow-lg border-8 border-white transition-all duration-700 ease-linear hover:bg-white hover:text-black">
+                {val.Solution_icon}
+              </div>
+              {/* Text Content */}
+              <div className="mt-4">
+                <h6 className="text-lg font-semibold text-black">{val.Solution_head}</h6>
+                <p className="text-gray-500 mt-2">{val.Solution_para}</p>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </>
+        ))}
+      </div>
   );
 };
 

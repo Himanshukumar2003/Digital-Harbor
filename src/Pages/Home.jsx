@@ -57,8 +57,34 @@ const Home = () => {
       <AboutCompo AboutBtn={true} />
       <div className='section bg-[url("./dots.png")] bg-gray-50'>
         <div className="container">
-          {/* First Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
+            {/* Image Section */}
+            <div>
+              <img
+                src="/header-1.jpg"
+                className="w-full h-auto rounded-lg shadow-lg"
+                alt="Digital Menu Display"
+              />
+            </div>
+
+            {/* Text Content Section */}
+            <div>
+              <h2 className="text-2xl font-bold my-3">
+                Digital Menu Full-Screen LCD Digital Signage
+              </h2>
+              <p className="text-gray-600 my-3">
+                Digital menu boards offer several advantages including: easy and
+                quick updates to menus, the ability to highlight specials and
+                new items, improved customer experience through visual appeal,
+                cost-effectiveness by reducing printing needs, potential sales
+                boosts by promoting specific dishes, and maintaining brand
+                consistency across all locations through centralized management.
+              </p>
+            </div>
+          </div>
+
+          {/* First Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center  mt-5">
             {/* Left Side (Text in Large Screens, Below Image in Small Screens) */}
             <div
               className="order-2 lg:order-1 text-center lg:text-left"
@@ -160,9 +186,7 @@ const Home = () => {
               className="relative"
             >
               {WorkMaping.map((val) => (
-                <SwiperSlide
-          
-                >
+                <SwiperSlide>
                   <div className="flex items-center justify-center rounded-2xl overflow-hidden">
                     <img
                       className="w-full rounded-2xl scale-100 transition-all duration-300 ease-linear hover:scale-125 hover:blur-[1px]"

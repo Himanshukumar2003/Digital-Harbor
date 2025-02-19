@@ -88,10 +88,10 @@ const Work = () => {
         </div>
         <div className='section'>
             <div className='container'>
-                    <h2 className='mb-3'>Our Client's</h2>
-                <div className="flex items-center justify-center md:justify-start flex-wrap">
+                    <h3 className='mb-3 text-red-600'>Our Clients</h3>
+                <div className="flex items-center justify-center md:justify-start flex-wrap gap-5 w-auto">
                     {ClientMaping.map((val)=>(
-                        <div key={val.id} className="grid-cols-12 md:grid-cols-4 lg:grid-cols-2 m-2">
+                        <div key={val.id} className="w-auto lg:w-[140px] object-cover">
                             <div className='' data-aos="fade-right"
                             data-aos-delay={val.clientdelay}><img className='w-40 mx-auto' src={val.Clientlogo} alt="" /></div>
                         </div>
