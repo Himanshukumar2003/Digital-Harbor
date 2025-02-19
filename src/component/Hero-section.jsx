@@ -43,11 +43,15 @@ const ImageSlider = () => {
 
       {/* Overlay Text */}
       <div className="absolute inset-0 z-[999] flex flex-col items-center justify-center text-center text-white p-5 bg-black bg-opacity-50">
-        <h1 className="mb-5 xl:leading-[70px] capitalize text-4xl font-bold">
+        <h1   data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="100" className="mb-5 xl:leading-[70px] capitalize text-4xl font-bold">
           Easy, <span className="text-white">affordable,</span> beautiful{" "}
           <span className="text-white">digital signage</span>
         </h1>
-        <p className="text-gray-50 text-[28px] max-w-xl">
+        <p   data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="300" className="text-gray-50 text-[28px] max-w-xl">
           Australia's premium Digital Display Board specialists!
         </p>
 
