@@ -38,7 +38,7 @@ html {
   }
 
   .section {
-    @apply pt-10 pb-10 pl-5 pr-5;
+    @apply pt-10 pb-10;
   }
 
   .section-two {
