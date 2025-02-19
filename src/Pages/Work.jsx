@@ -88,7 +88,7 @@ const Work = () => {
         </div>
         <div className='section'>
             <div className='container'>
-                    <h3 className='mb-3 text-red-600'>Our Clients</h3>
+                    <h3 className='mb-3 text-red-600'>Our Clients </h3>
                 <div className="flex items-center justify-center md:justify-start flex-wrap gap-5 w-auto">
                     {ClientMaping.map((val)=>(
                         <div key={val.id} className="w-auto lg:w-[140px] object-cover">
