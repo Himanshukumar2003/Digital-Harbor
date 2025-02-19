@@ -9,7 +9,7 @@ import img3 from "/header-3.jpeg";
 
 const ImageSlider = () => {
   return (
-    <div className="relative w-full h-[500px]">
+    <div className="relative w-full h-[90vh]">
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
