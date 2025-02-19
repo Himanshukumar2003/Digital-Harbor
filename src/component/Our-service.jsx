@@ -33,9 +33,10 @@ const services = [
 
 export default function ServiceCards() {
   return (
+    <div className="bg-light">
     <div className="container mx-auto p-6">
       <div className="centerhead mb-4">
-        <h2>Our Services</h2>
+        <h2>How Digital Harbour Supports You</h2>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {services.map((service, index) => (
@@ -55,6 +56,7 @@ export default function ServiceCards() {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }
