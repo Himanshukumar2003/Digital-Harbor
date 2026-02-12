@@ -148,3 +148,7 @@ html {
   font-size: 22px !important;
   font-weight: bold;
 }
+
+.fancybox__container {
+  z-index: 999999 !important;
+}

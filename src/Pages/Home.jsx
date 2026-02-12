@@ -5,8 +5,13 @@ import AboutCompo from "../component/AboutCompo";
 import { useNavigate } from "react-router-dom";
 import screen1 from "/screen3.webp";
 import outdoor from "/outdoor-img.png";
+import outdoorweb from "/outdoor-two.png";
+
 import screen2 from "/public/indoorsignage.png";
 import ImageSlider from "../component/Hero-section";
+import { useEffect } from "react";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import { Fancybox } from "@fancyapps/ui";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -17,11 +22,16 @@ import ServiceCards from "../component/Our-service";
 
 const Home = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    Fancybox.bind("[data-fancybox='gallery']", {});
+  }, []);
+
   const WorkMaping = [
     {
       id: 1,
       workdelay: "100",
-      WorkImg: "/work/work1.webp", // No dot (.) before "/work"
+      WorkImg: "/work/work1.webp",
     },
     {
       id: 2,
@@ -122,7 +132,7 @@ const Home = () => {
               data-aos-duration="1000"
               data-aos-delay="200"
             >
-              <img src={outdoor} alt="Outdoor Signage" className="w-full" />
+              <img src={outdoorweb} alt="Outdoor Signage" className="w-full" />
             </div>
           </div>
 
@@ -192,13 +202,15 @@ const Home = () => {
               className="relative"
             >
               {WorkMaping.map((val) => (
-                <SwiperSlide>
+                <SwiperSlide key={val.id}>
                   <div className="flex items-center justify-center rounded-2xl overflow-hidden">
-                    <img
-                      className="w-full rounded-2xl scale-100 transition-all duration-300 ease-linear hover:scale-125 hover:blur-[1px]"
-                      src={val.WorkImg}
-                      alt={`work ${val.id}`} // Accessibility के लिए alt text दिया
-                    />
+                    <a href={val.WorkImg} data-fancybox="gallery">
+                      <img
+                        className="w-full rounded-2xl scale-100 transition-all duration-300 ease-linear hover:scale-125 hover:blur-[1px]"
+                        src={val.WorkImg}
+                        alt="" 
+                      />
+                    </a>
                   </div>
                 </SwiperSlide>
               ))}
@@ -206,18 +218,19 @@ const Home = () => {
 
             {/* Custom Navigation Buttons */}
             <div
-              class="swiper-button-next"
+              className="swiper-button-next"
               data-aos="fade-right"
               data-aos-delay="800"
             ></div>
             <div
-              class="swiper-button-prev"
+              className="swiper-button-prev"
               data-aos="fade-left"
               data-aos-delay="1000"
             ></div>
           </div>
         </div>
       </div>
+
       <ServiceCards />
       <div className="section">
         <div className="container">

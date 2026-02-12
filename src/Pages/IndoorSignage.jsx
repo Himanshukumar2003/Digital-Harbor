@@ -60,7 +60,7 @@ const IndoorSignage = () => {
     
   return (
     <>
-        <Breadcrumb PageName={"Indoor Signage"} PageLink={"indoorsignage"}/>
+        <Breadcrumb PageName={"Indoor Signage"} PageLink={"indoor signage"}/>
         <div className='section bg-[url("../circle.webp")] bg-no-repeat bg-contain bg-left'>
             <div className="container">
                 <div className='grid grid-cols-12 place-items-center'>

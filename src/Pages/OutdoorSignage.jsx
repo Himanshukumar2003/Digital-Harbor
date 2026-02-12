@@ -65,14 +65,14 @@ const OutdoorSignage = () => {
     ]
   return (
     <>
-        <Breadcrumb PageName={'Outdoor Signage'} PageLink={'outdoorsignage'}/>
+        <Breadcrumb PageName={'Outdoor Signage'} PageLink={'outdoor signage'}/>
         <div className='section bg-[url("../circle.webp")] bg-no-repeat bg-contain bg-left'>
             <div className="container">
                 <div className='grid grid-cols-12 place-items-center'>
                     <div className="xl:col-span-7 md:col-span-12 col-span-12" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
                         <div>
                             <div>
-                                <p className='text-Black'><b> 43'Smart Outdoor Signage Portable Screen</b></p>
+                                <p className='text-Black'><b> 43" Smart Outdoor Signage Portable Screen</b></p>
                                 <h2 className='my-3'>New Second Generation</h2>
                                 <h5>Performance Improvement</h5>
                                 <p className='my-3'>Inheriting the exquisite craftsmanship and advanced special effect soft this product series, the appearance design is more beautiful, the piano paint is matched with the wire drawing process, the ultra-thin frame, and Seven new colors are added.</p>

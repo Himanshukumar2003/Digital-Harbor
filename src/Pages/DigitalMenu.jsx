@@ -4,7 +4,7 @@ import Breadcrumb from '../component/Breadcrumb'
 const DigitalMenu = () => {
   return (
     <>
-    <Breadcrumb PageName={"⁠Digital Menu Displays"} PageLink={"digitalmenudisplays"}/>
+    <Breadcrumb PageName={"⁠Digital Menu Displays"} PageLink={"digital menu displays"}/>
     <div className='section bg-[url("../circle.webp")] bg-no-repeat bg-contain bg-left'>
         <div className="container">
             <div className='grid grid-cols-12 gap-x-0 lg:gap-x-4 place-items-center'>

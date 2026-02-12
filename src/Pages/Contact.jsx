@@ -28,8 +28,8 @@ const Contact = () => {
     {
       id: 1,
       Contact_icon: <FaPhoneVolume />,
-      Contact_para: "+0434264234",
-      Contact_link: "tel:+0434264234",
+      Contact_para: "0434264234",
+      Contact_link: "tel:0434264234",
     },
     {
       id: 2,
@@ -110,9 +110,9 @@ const Contact = () => {
               <div className="bg-gray-100 py-20 px-10 rounded-lg shadow-DarkShadow h-full">
                 <h4 className="mb-3">Contact Details</h4>
                 <p>
-                  We are here to help! If you have any questions or would like to
-                  discuss how our Outdoor Signage & Indoor Signage services can
-                  benefit your business.
+                  We are here to help! If you have any questions or would like
+                  to discuss how our Outdoor Signage & Indoor Signage services
+                  can benefit your business.
                 </p>
                 <div className="mt-10">
                   {ContactJson.map((val) => (
@@ -126,19 +126,39 @@ const Contact = () => {
                     </div>
                   ))}
                   <div className="flex items-center justify-between mt-10">
-                    <a className="text-xl text-red-600" href="#" aria-label="Facebook">
+                    <a
+                      className="text-xl text-red-600"
+                      href="#"
+                      aria-label="Facebook"
+                    >
                       <FaFacebookF />
                     </a>
-                    <a className="text-xl text-red-600" href="#" aria-label="Instagram">
+                    <a
+                      className="text-xl text-red-600"
+                      href="#"
+                      aria-label="Instagram"
+                    >
                       <FaInstagram />
                     </a>
-                    <a className="text-xl text-red-600" href="#" aria-label="Twitter">
+                    <a
+                      className="text-xl text-red-600"
+                      href="#"
+                      aria-label="Twitter"
+                    >
                       <FaTwitter />
                     </a>
-                    <a className="text-xl text-red-600" href="#" aria-label="LinkedIn">
+                    <a
+                      className="text-xl text-red-600"
+                      href="#"
+                      aria-label="LinkedIn"
+                    >
                       <FaLinkedinIn />
                     </a>
-                    <a className="text-xl text-red-600" href="#" aria-label="Google">
+                    <a
+                      className="text-xl text-red-600"
+                      href="#"
+                      aria-label="Google"
+                    >
                       <FaGoogle />
                     </a>
                   </div>
