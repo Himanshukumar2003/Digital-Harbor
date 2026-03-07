@@ -1,24 +1,21 @@
-import React from "react";
 import Features from "../component/Features";
 import { GoArrowUpRight } from "react-icons/go";
 import AboutCompo from "../component/AboutCompo";
 import { useNavigate } from "react-router-dom";
-import screen1 from "/screen3.webp";
-import outdoor from "/outdoor-img.png";
-import outdoorweb from "/outdoor-two.png";
 
-import screen2 from "/public/indoorsignage.png";
 import ImageSlider from "../component/Hero-section";
 import { useEffect } from "react";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import { Fancybox } from "@fancyapps/ui";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import ServiceCards from "../component/Our-service";
+import { ClientMaping } from "@/data/ClientLogos";
+import { Products } from "@/data/products";
+import { WorkMaping } from "@/data/resent-work";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -27,155 +24,61 @@ const Home = () => {
     Fancybox.bind("[data-fancybox='gallery']", {});
   }, []);
 
-  const WorkMaping = [
-    {
-      id: 1,
-      workdelay: "100",
-      WorkImg: "/work/work1.webp",
-    },
-    {
-      id: 2,
-      workdelay: "200",
-      WorkImg: "/work/work2.webp",
-    },
-    {
-      id: 3,
-      workdelay: "300",
-      WorkImg: "/work/work3.webp",
-    },
-    {
-      id: 4, // Fixed duplicate "id: 3"
-      workdelay: "500",
-      WorkImg: "/work/work4.webp",
-    },
-    {
-      id: 5, // Fixed duplicate "id: 3"
-      workdelay: "500",
-      WorkImg: "/work/work5.webp",
-    },
-    {
-      id: 6, // Fixed duplicate "id: 3"
-      workdelay: "500",
-      WorkImg: "/work/work6.webp",
-    },
-  ];
-
   return (
     <>
       <ImageSlider></ImageSlider>
 
       <AboutCompo AboutBtn={true} />
-      <div className='section bg-[url("./dots.png")] bg-gray-50'>
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
-            {/* Image Section */}
-            <div>
-              <img
-                src="/header-1.jpg"
-                className="w-full h-auto rounded-lg shadow-lg"
-                alt="Digital Menu Display"
-              />
-            </div>
 
-            {/* Text Content Section */}
-            <div>
-              <h2 className="text-2xl font-bold my-3">
-                Digital Menu Full-Screen LCD Digital Signage
-              </h2>
-              <p className="text-gray-600 my-3">
-                Digital menu boards offer several advantages including: easy and
-                quick updates to menus, the ability to highlight specials and
-                new items, improved customer experience through visual appeal,
-                cost-effectiveness by reducing printing needs, potential sales
-                boosts by promoting specific dishes, and maintaining brand
-                consistency across all locations through centralized management.
-              </p>
-              <button
-                className="circlebtn"
-                onClick={() => navigate("/digitalmenudisplays")}
+      {Products.map((item, index) => (
+        <div
+          key={item.id}
+          className={`section ${
+            index % 2 === 1 ? 'bg-[url("./dots.png")] bg-gray-50' : "bg-white"
+          }`}
+        >
+          <div className="container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center mt-5">
+              {/* Image */}
+              <div
+                className={` mix-blend-multiply  ${
+                  index % 2 === 0 ? "order-1 lg:order-2" : "order-1"
+                }`}
+                data-aos="fade-up"
+                data-aos-duration="1000"
               >
-                Learn More <GoArrowUpRight className="circledesign" />
-              </button>
-            </div>
-          </div>
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full  max-h-[500px] object-contain"
+                />
+              </div>
 
-          {/* First Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center  mt-5">
-            {/* Left Side (Text in Large Screens, Below Image in Small Screens) */}
-            <div
-              className="order-2 lg:order-1 text-center lg:text-left"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="100"
-            >
-              <h2 className="lefthead">
-                43" Smart Outdoor Signage Portable Screen
-              </h2>
-              <p>
-                Inheriting the exquisite craftsmanship and advanced special
-                effects of this product series, the appearance design is more
-                beautiful, the piano paint is matched with the wire drawing
-                process, the ultra-thin frame, and seven new colors are added.
-              </p>
-              <button
-                className="circlebtn"
-                onClick={() => navigate("/outdoorsignage")}
+              {/* Text */}
+              <div
+                className={`${
+                  index % 2 === 0 ? "order-2 lg:order-1" : "order-2 lg:order-2"
+                } lg:text-left`}
+                data-aos="fade-down"
+                data-aos-duration="1000"
               >
-                Learn More <GoArrowUpRight className="circledesign" />
-              </button>
-            </div>
+                <h2 className="lefthead">{item.title}</h2>
+                <h4 className=" mb-3   text-lg">{item.subtitle}</h4>
+                {item.description.map((para, i) => (
+                  <p key={i}>{para}</p>
+                ))}
 
-            {/* Right Side (Image in Large Screens, Above Text in Small Screens) */}
-            <div
-              className="order-1 lg:order-2"
-              data-aos="fade-down"
-              data-aos-duration="1000"
-              data-aos-delay="200"
-            >
-              <img src={outdoorweb} alt="Outdoor Signage" className="w-full" />
-            </div>
-          </div>
-
-          {/* Second Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center mt-5">
-            {/* Left Side (Image in Large Screens, Above Text in Small Screens) */}
-            <div
-              className="order-1"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="300"
-            >
-              <img src={screen2} alt="Screen 2" className="w-full" />
-            </div>
-
-            {/* Right Side (Text in Large Screens, Below Image in Small Screens) */}
-            <div
-              className="order-2 lg:order-1 text-center lg:text-left"
-              data-aos="fade-down"
-              data-aos-duration="1000"
-              data-aos-delay="400"
-            >
-              <h2 className="lefthead">
-                Indoor Full Screen LCD Digital Signage
-              </h2>
-              <p>
-                The Indoor Double-Sided Full-Screen LCD Digital Signage is a
-                powerful tool for businesses looking to enhance their
-                advertising efforts. Its double-sided display, high-resolution
-                visuals, and sleek design make it an effective and attractive
-                solution for engaging your audience. Invest in this advanced
-                digital signage to maximize your advertising reach and impact.
-              </p>
-              <button
-                className="circlebtn"
-                onClick={() => navigate("/indoorsignage")}
-              >
-                Learn More <GoArrowUpRight className="circledesign" />
-              </button>
+                <button
+                  className="circlebtn"
+                  onClick={() => navigate(item.slug)}
+                >
+                  Learn More <GoArrowUpRight className="circledesign" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      ))}
 
       <div className="section">
         <div className="container">
@@ -206,9 +109,9 @@ const Home = () => {
                   <div className="flex items-center justify-center rounded-2xl overflow-hidden">
                     <a href={val.WorkImg} data-fancybox="gallery">
                       <img
-                        className="w-full rounded-2xl scale-100 transition-all duration-300 ease-linear hover:scale-125 hover:blur-[1px]"
+                        className="w-full rounded-2xl   aspect-square scale-100 transition-all duration-300 ease-linear hover:scale-125 hover:blur-[1px]"
                         src={val.WorkImg}
-                        alt="" 
+                        alt=""
                       />
                     </a>
                   </div>
@@ -240,6 +143,51 @@ const Home = () => {
           <div className="grid grid-cols-12  mt-4">
             <Features />
           </div>
+        </div>
+      </div>
+      <div className="section bg-gray-50">
+        <div className="container">
+          <h3 className=" text-red-600 text-center mb-6">Our Clients </h3>
+          <div className="flex flex-wrap items-center justify-center  gap-8  max-w-6xl mx-auto"></div>
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={20}
+            slidesPerView={5}
+            loop={true}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              320: { slidesPerView: 2 },
+              640: { slidesPerView: 3 },
+              768: { slidesPerView: 4 },
+              1024: { slidesPerView: 7 },
+            }}
+          >
+            {ClientMaping.map((val) => (
+              <SwiperSlide key={val.id}>
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay={val.clientdelay}
+                  className="group relative flex items-center justify-center 
+        w-40 h-24 p-2 
+        bg-white  
+        rounded-2xl 
+        shadow-sm
+        hover:shadow-xl 
+        transition-all duration-500 
+        hover:-translate-y-2"
+                >
+                  <img
+                    src={val.Clientlogo}
+                    alt="client-logo"
+                    className="object-contain transition duration-500"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </>

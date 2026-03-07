@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import {
   FaPhoneVolume,
   FaFacebookF,
@@ -8,7 +8,6 @@ import {
   FaGoogle,
 } from "react-icons/fa";
 import { MdMarkEmailUnread } from "react-icons/md";
-import { IoLocationSharp } from "react-icons/io5";
 import Breadcrumb from "../component/Breadcrumb";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -75,8 +74,8 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_khexx1d", "template_m0cw48o", form.current, {
-        publicKey: "n1t417qsxsGusEBnm",
+      .sendForm("service_jrae1dg", "template_s9p33bs", form.current, {
+        publicKey: "oe1y-5jSwdMpEGWJ-",
       })
       .then(
         () => {
@@ -87,7 +86,7 @@ const Contact = () => {
             usercity: "",
             usermsg: "",
           });
-          alert("SUCCESS!");
+          alert("✅ Thank you! Your enquiry has been submitted successfully.");
         },
         (error) => {
           console.log("FAILED...", error.text);

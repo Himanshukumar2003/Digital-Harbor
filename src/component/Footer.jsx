@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -43,9 +42,9 @@ const Footer = () => {
           <div className="grid-cols-9  justify-center items-center">
             <div className="flex items-center justify-center flex-col">
               <a onClick={() => navigate("/")}>
-                <img src="./white-logo.png" className="w-40 xl:w-52" />
+                <img src="../white-logo.png" className="w-40 xl:w-52" />
               </a>
-              <ul className="flex items-center justify-start xl:justify-center gap-x-5 mt-5 flex-wrap">
+              <ul className="flex items-center  justify-center gap-x-5 mt-5 flex-wrap">
                 <a className="text-White" onClick={() => navigate("/")}>
                   Home
                 </a>
@@ -80,7 +79,7 @@ const Footer = () => {
                   Contact
                 </a>
               </ul>
-              <ul className="flex items-center justify-start xl:justify-center flex-wrap gap-x-5 mt-5">
+              <ul className="flex items-center justify-center flex-wrap gap-x-5 mt-5">
                 <a className="text-White" href="tel: 0434264234">
                   0434264234
                 </a>

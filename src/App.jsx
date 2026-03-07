@@ -14,8 +14,17 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AOS from "aos";
 import DigitalMenu from "./Pages/DigitalMenu";
-AOS.init();
-
+import WindowDisplay from "./Pages/window-display";
+import DigitalDisplay from "./Pages/digital-display";
+import InteractiveDisplay from "./Pages/interactive-display";
+import PortableDisplay from "./Pages/PortableDisplay";
+import LedDisplay from "./Pages/led-display-1920x640";
+import { Toaster } from "./components/ui/toaster";
+AOS.init({
+  once: true,
+  duration: 800,
+  easing: "ease-in-out",
+});
 const Outletext = () => {
   return (
     <>
@@ -49,21 +58,49 @@ function App() {
           element: <Solutions />,
         },
         {
-          path: "/indoorsignage",
-          element: <IndoorSignage />,
-        },
-        {
-          path: "/outdoorsignage",
-          element: <OutdoorSignage />,
-        },
-        {
           path: "/recent-work",
-          element: <Work/>
+          element: <Work />,
         },
         {
           path: "digitalmenudisplays",
-          element: <DigitalMenu/>
-        }
+          element: <DigitalMenu />,
+        },
+
+        // Indoor Signage
+        {
+          path: "indoorsignage",
+          element: <IndoorSignage />,
+          children: [
+            {
+              path: "window-display",
+              element: <WindowDisplay />,
+            },
+            {
+              path: "digital-display",
+              element: <DigitalDisplay />,
+            },
+            {
+              path: "interactive-display",
+              element: <InteractiveDisplay />,
+            },
+          ],
+        },
+
+        // Outdoor Signage
+        {
+          path: "outdoorsignage",
+          element: <OutdoorSignage />,
+          children: [
+            {
+              path: "portable-display",
+              element: <PortableDisplay />,
+            },
+            {
+              path: "led-display-1920x640",
+              element: <LedDisplay />,
+            },
+          ],
+        },
       ],
     },
   ]);
@@ -71,6 +108,7 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />
+      <Toaster />
     </>
   );
 }
