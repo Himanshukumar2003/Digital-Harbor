@@ -105,6 +105,17 @@ const Navbar = () => {
                       >
                         Interactive Display
                       </li>
+
+                      <li
+                        className="px-4 py-2 text-black hover:text-red-600  hover:bg-red-100 cursor-pointer"
+                        onClick={() =>
+                          navigate(
+                            "/indoorsignage/video-wall-display-solutions"
+                          )
+                        }
+                      >
+                        Video Wall Display
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -257,6 +268,16 @@ const Navbar = () => {
                 }}
               >
                 Interactive Display
+              </li>
+
+              <li
+                className="text-gray-300 cursor-pointer"
+                onClick={() => {
+                  navigate("/indoorsignage/video-wall-display-solutions");
+                  closeMenu();
+                }}
+              >
+                Video Wall Display
               </li>
             </ul>
           )}

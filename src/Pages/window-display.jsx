@@ -51,7 +51,7 @@ export default function WindowDisplay() {
       <Breadcrumb PageName={"Window Display"} PageLink={"Window Display"} />
 
       {/* Product Section */}
-      <section className="py-16">
+      <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-10 items-start">
             {/* Images */}
@@ -119,7 +119,7 @@ export default function WindowDisplay() {
 
       {/* Features Section */}
 
-      <section className="bg-gray-50 py-20">
+      <section className="bg-gray-50 py-12">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
             <span className="text-red-600 font-semibold uppercase text-sm">

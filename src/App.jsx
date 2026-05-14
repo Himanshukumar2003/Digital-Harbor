@@ -20,6 +20,7 @@ import InteractiveDisplay from "./Pages/interactive-display";
 import PortableDisplay from "./Pages/PortableDisplay";
 import LedDisplay from "./Pages/led-display-1920x640";
 import { Toaster } from "./components/ui/toaster";
+import VideowallVideowallDisplay from "./Pages/video-wall-display-solutions";
 AOS.init({
   once: true,
   duration: 800,
@@ -82,6 +83,11 @@ function App() {
             {
               path: "interactive-display",
               element: <InteractiveDisplay />,
+            },
+
+            {
+              path: "video-wall-display-solutions",
+              element: <VideowallVideowallDisplay />,
             },
           ],
         },

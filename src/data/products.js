@@ -35,8 +35,22 @@ export const Products = [
       "With remote management capabilities, content and applications can be updated anytime from anywhere, ensuring your display always stays updated with the latest information.",
     ],
   },
+
   {
     id: 4,
+    slug: "/indoorsignage/video-wall-display-solutions",
+    title: "Video Wall Display",
+    subtitle: "VIDEO WALL DISPLAY SOLUTIONS",
+    img: "./product/Video-Wall.jpeg",
+    description: [
+      "Video Wall Displays are engineered to transform any commercial space into a bold, high-impact visual experience. With seamless panel alignment, exceptional colour accuracy, and ultra-thin bezels, these displays create one uninterrupted canvas that commands attention from every corner of the room.",
+      "Designed for continuous 24/7 operation, video walls are perfect for retail stores, corporate lobbies, restaurants, showrooms, and entertainment venues. Deliver menus, promotions, live content, and immersive brand storytelling — all on a display built to perform without compromise.",
+      "Easily update and manage your content remotely in real time, without any manual intervention or technical expertise required.",
+    ],
+  },
+
+  {
+    id: 5,
     slug: "/outdoorsignage/portable-display",
     title: "Portable Outdoor Digital Display",
     subtitle: "Battery Powered Smart Advertising Screen",
@@ -49,7 +63,7 @@ export const Products = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     slug: "/outdoorsignage/led-display-1920x640",
     title: "1920 × 640 MM LED Display",
     subtitle: "Outdoor LED Advertising Display",
